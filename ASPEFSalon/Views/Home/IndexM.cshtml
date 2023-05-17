@@ -1,14 +1,19 @@
 ﻿@model IEnumerable<EFSalon.Master>
-        @{ ViewBag.Title = "Все мастера"; }
-        <a asp-action="CreateС">Добавить мастера</a>
-        <table class="table">
-            <tr><td>Имя</td><td>Возраст</td></tr>
-            @foreach (var item in Model)
-            {
+    @{ ViewBag.Title = "Мастера"; }
+    <a asp-action="Create">Добавить клиента</a>
+    <p></p>
+    <a asp-action="CreateM">Добавить мастера</a>
+    <p></p>
+    <a asp-action="Index">Сменить таблицу</a>
+    <p></p>
+    <h1>Мастера</h1>
+    <table class="table">
+        <tr><td>Имя</td><td>Фамилия</td><td>Пол</td></tr>
+        @foreach (var item in Model)
+        {
 <tr>
     <td>@item.Name</td>
     <td>@item.Surname</td>
     <td>@item.Gender</td>
-</tr>
-}
-        </table>
+</tr>}
+    </table>
